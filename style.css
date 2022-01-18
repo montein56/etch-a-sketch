@@ -27,8 +27,8 @@ h1{
 
 #container{
     border: solid red 2px;
-    width: 550px;
-    height: 550px;
+    width: 500px;
+    height: 500px;
     background-color: black;
 }
 .row{
