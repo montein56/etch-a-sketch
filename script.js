@@ -18,8 +18,8 @@ function drawGrid(size, clr) {
   container.innerHTML = s;
   const cells = document.getElementsByClassName("cell");
   for (let x = 0; x < cells.length; x++) {
-    cells[x].style["width"] = `${550/n}px`;
-    cells[x].style["height"] = `${550/n}px`;
+    cells[x].style["width"] = `${500/n}px`;
+    cells[x].style["height"] = `${500/n}px`;
     cells[x].addEventListener("mouseenter", event =>        
     cells[x].style.backgroundColor=rndColor(clr), false); 
   }
