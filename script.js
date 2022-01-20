@@ -12,15 +12,16 @@ function drawGrid(gridSize, colorSelected) {
   let numOfRows=-1, numOfCols=0, divText='';
   while(++numOfRows<gridSize) {
     divText+= '<div class="row">';
-    for(numOfCols=0; numOfCols<gridSize; numOfCols++) divText+= `<div class="cell"></div>`;
-    divText+= '</div>';
+    for(numOfCols=0; numOfCols<gridSize; numOfCols++) 
+      divText+= `<div class="cell"></div>`;
+      divText+= '</div>';
   }
   container.innerHTML = divText;
    
   const cells = document.getElementsByClassName("cell");
   for (let x = 0; x < cells.length; x++) {
-    cells[x].style["width"] = `${500/gridSize}px`;
-    cells[x].style["height"] = `${500/gridSize}px`;
+    // cells[x].style["width"] = `${500/gridSize}px`;
+    // cells[x].style["height"] = `${500/gridSize}px`;
     cells[x].addEventListener("mouseenter", event =>        
     cells[x].style.backgroundColor=rndColor(colorSelected), false); 
   }
