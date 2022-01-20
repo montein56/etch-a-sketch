@@ -9,19 +9,17 @@ function getSize(colorSelected){
 
 //FUNC FOR DRAWING THE ACTUAL GRID BY CREATING DIVS
 function drawGrid(gridSize, colorSelected) {
-  let numOfRows=-1, numOfCols=0, divText='';
-  while(++numOfRows<gridSize) {
-    divText+= '<div class="row">';
-    for(numOfCols=0; numOfCols<gridSize; numOfCols++) 
-      divText+= `<div class="cell"></div>`;
-      divText+= '</div>';
+  let divText="";
+  for (numRows = 0; numRows<gridSize; numRows++){
+    divText += '<div class="row">';
+    for (numCols = 0; numCols<gridSize; numCols++)
+      divText += '<div class = "cell"></div>'
+      divText += '</div>'
   }
-  container.innerHTML = divText;
+    container.innerHTML = divText;
    
   const cells = document.getElementsByClassName("cell");
   for (let x = 0; x < cells.length; x++) {
-    // cells[x].style["width"] = `${500/gridSize}px`;
-    // cells[x].style["height"] = `${500/gridSize}px`;
     cells[x].addEventListener("mouseenter", event =>        
     cells[x].style.backgroundColor=rndColor(colorSelected), false); 
   }
